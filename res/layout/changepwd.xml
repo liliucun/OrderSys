@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/username"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:text="用户名："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/user"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:ems="11"
+            android:textSize="16dp" >
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:text="旧密码："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/oldpwd"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:ems="15"
+            android:textSize="16dp" >
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:text="新密码："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:ems="15"
+            android:textSize="16dp" >
+        </EditText>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dip"
+        android:layout_marginRight="7dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:text="再输一次："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/pwdagain"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:ems="15"
+            android:textSize="16dp" >
+        </EditText>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+  
+		 <Button
+		     android:id="@+id/btn_change"
+		     android:layout_width="fill_parent"
+		     android:layout_height="50dip"
+		     android:layout_alignParentBottom="true"
+		
+		     android:background="#00BFFF"
+		     android:text="修改"
+		     android:textColor="#FFFFFF"
+		     android:textSize="18dp" />
+
+    </RelativeLayout>
+    
+</LinearLayout>

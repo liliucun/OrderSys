@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="县区:"
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="编号："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Idtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="地址："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="派单人："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="接单人："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/installedperson"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="18sp"
+            android:textColor="#222222" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="布线方式："
+            android:textColor="#222222"
+            android:textSize="18dip" />
+
+        <Spinner
+            android:id="@+id/Spinner_linetype"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="成功装机："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/Spinner_issuccess"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="原因："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/Spinner_mainreason"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="具体原因："
+            android:textColor="#222222"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/Spinner_reason"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+        </Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="SN："
+            android:textColor="#222222"
+            android:textSize="18sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/SNEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:ems="20" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="用户账号："
+            android:textColor="#222222"            
+            android:textSize="18sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/UserAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:inputType="phone"
+            android:digits="0123456789"
+            android:maxLength="11"
+            android:ems="20" >
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="40dip"
+            android:layout_marginLeft="7dip"
+            android:text="用料备注："
+            android:textColor="#222222"
+            android:textSize="18sp" >
+        </TextView>
+
+        <EditText
+            android:id="@+id/RemarkEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:ems="20" >
+        </EditText>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/receipt_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#00BFFF"
+            android:textColor="#FFFFFF"
+            android:text="回 单" />
+    </RelativeLayout>
+
+</LinearLayout>

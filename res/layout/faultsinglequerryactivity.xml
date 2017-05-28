@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    android:orientation="vertical" >
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"  
+   		android:focusableInTouchMode="true"
+        android:orientation="vertical">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="归属地："
+            android:textColor="#222222"
+            android:textSize="18sp" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="归属片区："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/area"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="小区："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/cell"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content">
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="小区地址："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/celladdress"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="接入方式："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/inmode"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="维护人："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/person"
+            android:layout_width="fill_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="派单人："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="用户电话："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/userphone"
+            android:layout_width="wrap_content"
+            android:background="#008B8B"
+            android:clickable="true"
+            android:layout_height="wrap_content"
+            android:textSize="19dp"
+            android:textColor="#FFFFFF" >
+        </TextView>
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="点击拨号"
+            android:textColor="#808080"
+            android:textSize="14dip" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="故障类别："
+            android:textColor="#222222"            
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/faulttype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="故障描述："
+            android:textColor="#222222"            
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/faultdescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="故障地址："
+            android:textColor="#222222"            
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/useraddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="派单时间："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/pdtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="接单时间："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/jdtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="完成时间："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/wctime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="当前状态："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="耗时："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/usedtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="是否结束："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/isover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp" >
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="处理结果："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/issuccess"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="故障原因："
+            android:textColor="#222222"
+            android:textSize="18dip" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/faultreason"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" 
+            android:textSize="18sp">
+        </TextView>
+    </LinearLayout>
+ 	</LinearLayout>
+    </ScrollView>
+
+ <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginTop="-50dp"
+        android:orientation="horizontal" >
+<!--          <Button -->
+<!-- 		     android:id="@+id/btn_delete" -->
+<!-- 		     android:layout_width="100dp" -->
+<!-- 		     android:layout_height="50dip" -->
+<!-- 		     android:layout_alignParentBottom="true" -->
+		
+<!-- 		     android:background="#FF4500" -->
+<!-- 		     android:text="删除" -->
+<!-- 		     android:textColor="#FFFFFF" -->
+<!-- 		     android:textSize="18dp" /> -->
+  
+		 <Button
+		     android:id="@+id/btn_cancel"
+		     android:layout_width="fill_parent"
+		     android:layout_height="50dip"
+		     android:layout_alignParentBottom="true"
+		
+		     android:background="#00BFFF"
+		     android:text="撤销"
+		     android:textColor="#FFFFFF"
+		     android:textSize="18dp" />
+
+    </RelativeLayout>
+</LinearLayout>
+   
