@@ -393,11 +393,11 @@ public class AddkrActivity extends Activity {
 	// 添加到数据库
 	public void addjob(final String country, 
 			final String sender, final String installperson,
-			final String uerInfo,
+			final String userInfo,
 			final String area, final String cell, final String celladdress,
 			final String inmode, final String User,
 			final String remark) {
-		new AsyncTask<String, Void, String>() {
+		new AsyncTask<String, Void, List<HashMap<String, String>>>() {
 			Toast toast;// 显示提交状态
 
 			@Override
@@ -409,39 +409,50 @@ public class AddkrActivity extends Activity {
 			}
 
 			@Override
-			protected String doInBackground(String... params) {
-				return dbUtil.InsertJob(params[0], params[1], params[2],
+			protected List<HashMap<String, String>> doInBackground(String... params) {
+				return dbUtil.InsertKr(params[0], params[1], params[2],
 						params[3], params[4], params[5], params[6], params[7],
-						params[8], params[9], params[10], params[11],
-						params[12], params[13]);
+						params[8], params[9]);
 			}
 
 			@Override
-			protected void onPostExecute(String result) {
-				toast.cancel();
-				Toast.makeText(AddkrActivity.this, result, Toast.LENGTH_SHORT)
-						.show();
-				if (result.equals("Success")) {
-					// //给接单人发送短信
-					String[] info = installperson.split(":");
-					if (info.length >= 1) {
-						String phoneNumber = info[1];
-						String message = "宽带装维新派单：" + country + "用户[" + uerInfo
-								+ "]"+type+"，地址：" + useraddress + ",片区：" + area
-								+ ",小区：" + cell + ",接入方式:" + inmode + ",由["
-								+ sender + "]派单。";
-						Log.d("派单短信", message);
-						sendSMS(phoneNumber, message);
-					}
+			protected void onPostExecute(List<HashMap<String, String>> result) {
+				if (result.get(0).get("result").equals("True")) 
+				{
+					toast.cancel();
+					Toast.makeText(AddkrActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
 					finish();
-				} else {
+				}
+				else
+				{
+					toast.cancel();
+					Toast.makeText(AddkrActivity.this, result.get(0).get("result"), Toast.LENGTH_SHORT).show();
 					btn_add.setEnabled(true);
 				}
+//				toast.cancel();
+//				Toast.makeText(AddkrActivity.this, result, Toast.LENGTH_SHORT)
+//						.show();
+//				if (result.equals("Success")) {
+//					// //给接单人发送短信
+//					String[] info = installperson.split(":");
+//					if (info.length >= 1) {
+//						String phoneNumber = info[1];
+//						String message = "宽带装维新派单：" + country + "用户[" + uerInfo
+//								+ "]"+type+"，地址：" + useraddress + ",片区：" + area
+//								+ ",小区：" + cell + ",接入方式:" + inmode + ",由["
+//								+ sender + "]派单。";
+//						Log.d("派单短信", message);
+//						sendSMS(phoneNumber, message);
+//					}
+//					finish();
+//				} else {
+//					btn_add.setEnabled(true);
+//				}
 				super.onPostExecute(result);
 			}
 
-		}.execute(country, type, sender, installperson, uerInfo, useraddress,
-				money, area, cell, celladdress, inmode, User, account, remark);
+		}.execute(country, sender, installperson, userInfo,
+				 area, cell, celladdress, inmode, User,  remark);
 
 	}
 

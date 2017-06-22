@@ -134,6 +134,8 @@
         </activity>
         <activity android:name="AddZdActivity" >
         </activity>
+        <activity android:name="AddkrActivity" >
+        </activity>
         <activity android:name="MarkCell" >
         </activity>
         <activity android:name="com.karics.library.zxing.android.CaptureActivity" >

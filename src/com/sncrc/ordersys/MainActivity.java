@@ -83,8 +83,8 @@ public class MainActivity extends Activity {
 	    	{
 		        if(Power.equals("超级管理员")||Power.equals("县区管理员"))
 		        {
-			        Object [] imageObjects={R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_addfault,R.drawable.icon_faulthis,R.drawable.icon_newuser,R.drawable.icon_map,R.drawable.icon_chgpwd,R.drawable.icon_report,R.drawable.icon_exit};
-			        Object[] valueObjects={"新装派单","装机工单查询","故障派单","故障工单查询","新增用户","未覆盖小区标记","修改密码","统计报表","用户退出"};
+			        Object [] imageObjects={R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_addfault,R.drawable.icon_faulthis,R.drawable.icon_add,R.drawable.icon_newuser,R.drawable.icon_map,R.drawable.icon_chgpwd,R.drawable.icon_report,R.drawable.icon_exit};
+			        Object[] valueObjects={"新装派单","装机工单查询","故障派单","故障工单查询","扩容派单","新增用户","未覆盖小区标记","修改密码","统计报表","用户退出"};
 			        for(int i = 0;i <9;i++)
 			        {
 			            HashMap<String, Object> map = new HashMap<String, Object>();
@@ -284,6 +284,11 @@ public class MainActivity extends Activity {
 	                        		//Intent installlistIntent=new Intent(MainActivity.this,UploadImgActivity.class);
 	                        		//installlistIntent.putExtras(b);
 									//startActivity(installlistIntent);
+	                        	}
+	                        	else if(title.equals("扩容派单"))
+	                        	{
+	                        		Intent installlistIntent=new Intent(MainActivity.this,AddkrActivity.class);
+									startActivity(installlistIntent);
 	                        	}
 	                            //Toast.makeText(getApplicationContext(), "跳转中...", 0).show();
 	                            //Toast用于向用户显示一些帮助/提示
