@@ -471,7 +471,10 @@ public class DBUtil {
             List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();   
             HashMap<String, String> map=new HashMap<String, String>();
             String doc=null;
-            map.put("country", country);
+            map.put("type", "update");
+      	  	map.put("op", "new");
+      	  	map.put("id", "0");
+            map.put("county", country);
             map.put("sender", sender);
             map.put("installperson", installperson);
             map.put("userInfo", userInfo);
@@ -481,8 +484,8 @@ public class DBUtil {
             map.put("inmode", inmode);
             map.put("User", User);
             map.put("remark", remark);
-            doc=HttpConn.GetWebServre("zdgdgl", map);
-            Log.d("SelectZdhd:",doc);
+            doc=HttpConn.GetWebServre("krgdgl", map);
+            Log.d("扩容工单提交:",doc);
             list=JsonUtil.json2list(doc);
             return list;
         }

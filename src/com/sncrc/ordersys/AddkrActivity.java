@@ -417,7 +417,13 @@ public class AddkrActivity extends Activity {
 
 			@Override
 			protected void onPostExecute(List<HashMap<String, String>> result) {
-				if (result.get(0).get("result").equals("True")) 
+				if(result==null)
+				{
+					toast.cancel();
+					Toast.makeText(AddkrActivity.this, "服务器发生错误", Toast.LENGTH_SHORT).show();
+					btn_add.setEnabled(true);
+				}
+				else if (result.get(0).get("result").equals("True")) 
 				{
 					toast.cancel();
 					Toast.makeText(AddkrActivity.this, "提交成功", Toast.LENGTH_SHORT).show();

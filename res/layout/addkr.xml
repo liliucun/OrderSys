@@ -23,7 +23,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="40dip"
-                    android:text="归属地："
+                    android:text="县区："
                     android:textColor="#222222"
                     android:textSize="18sp" >
                 </TextView>

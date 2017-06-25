@@ -85,7 +85,7 @@ public class MainActivity extends Activity {
 		        {
 			        Object [] imageObjects={R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_addfault,R.drawable.icon_faulthis,R.drawable.icon_add,R.drawable.icon_newuser,R.drawable.icon_map,R.drawable.icon_chgpwd,R.drawable.icon_report,R.drawable.icon_exit};
 			        Object[] valueObjects={"新装派单","装机工单查询","故障派单","故障工单查询","扩容派单","新增用户","未覆盖小区标记","修改密码","统计报表","用户退出"};
-			        for(int i = 0;i <9;i++)
+			        for(int i = 0;i <10;i++)
 			        {
 			            HashMap<String, Object> map = new HashMap<String, Object>();
 			            map.put("ItemImage",imageObjects[i]);
@@ -110,9 +110,9 @@ public class MainActivity extends Activity {
 	    	{
 	    		if(Power.equals("超级管理员")||Power.equals("县区管理员"))
 		        {
-			        Object [] imageObjects={R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_addfault,R.drawable.icon_faulthis,R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_newuser,R.drawable.icon_map,R.drawable.icon_chgpwd,R.drawable.icon_report,R.drawable.icon_exit};
-			        Object[] valueObjects={"新装派单","装机工单查询","故障派单","故障工单查询","终端派单","终端工单查询","新增用户","未覆盖小区标记","修改密码","统计报表","用户退出"};
-			        for(int i = 0;i <11;i++)
+			        Object [] imageObjects={R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_addfault,R.drawable.icon_faulthis,R.drawable.icon_add,R.drawable.icon_add,R.drawable.icon_his,R.drawable.icon_newuser,R.drawable.icon_map,R.drawable.icon_chgpwd,R.drawable.icon_report,R.drawable.icon_exit};
+			        Object[] valueObjects={"新装派单","装机工单查询","故障派单","故障工单查询","扩容派单","终端派单","终端工单查询","新增用户","未覆盖小区标记","修改密码","统计报表","用户退出"};
+			        for(int i = 0;i <12;i++)
 			        {
 			            HashMap<String, Object> map = new HashMap<String, Object>();
 			            map.put("ItemImage",imageObjects[i]);
