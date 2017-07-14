@@ -58,11 +58,11 @@ public class reportActivity extends Activity {
 		{
 			if(myApp.getRole().equals(""))
 			{
-				type = new String[]{"新装汇总表","新装分类汇总表","新装未完成工单统计表","故障汇总表","故障未完成工单统计表"};
+				type = new String[]{"新装汇总表","新装分类汇总表","新装未完成工单统计表","魔百和汇总表","故障汇总表","故障未完成工单统计表"};
 			}
 			else
 			{
-				type = new String[]{"新装汇总表","新装分类汇总表","新装未完成工单统计表","故障汇总表","故障未完成工单统计表","终端汇总表"};
+				type = new String[]{"新装汇总表","新装分类汇总表","新装未完成工单统计表","魔百和汇总表","故障汇总表","故障未完成工单统计表","终端汇总表"};
 			}
 		}
 		listview = (ListView) findViewById(R.id.reportList);
@@ -199,6 +199,17 @@ public class reportActivity extends Activity {
 						adapter.SetDisplayColNum(8);//设置表格显示的列数
 						listview.setAdapter(adapter);
 					}
+					else if(spinner_type.getSelectedItem().toString().equals("魔百和汇总表"))
+					{
+						//装机汇总表
+						MyReportAdapter adapter = new MyReportAdapter(
+							reportActivity.this, list,
+							R.layout.report_div, 
+							new String[] { "县区","当日派单","当日成功装机","当月派单","当月成功装机","未完成工单","超时未完成工单","待审核工单"}, 
+							new int[] { R.id.col1,R.id.col2,R.id.col3,R.id.col4,R.id.col5,R.id.col6,R.id.col7,R.id.col8});
+						adapter.SetDisplayColNum(8);//设置表格显示的列数
+						listview.setAdapter(adapter);
+					}
 					else if(spinner_type.getSelectedItem().toString().equals("故障汇总表"))
 					{
 						//故障汇总
@@ -223,7 +234,7 @@ public class reportActivity extends Activity {
 					}
 					else if(spinner_type.getSelectedItem().toString().equals("终端汇总表"))
 					{
-						//故障汇总
+						//终端汇总
 						MyReportAdapter adapter = new MyReportAdapter(
 								reportActivity.this, list,
 								R.layout.report_div, 

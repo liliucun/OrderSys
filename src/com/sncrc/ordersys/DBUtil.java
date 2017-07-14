@@ -549,7 +549,7 @@ public class DBUtil {
      *  
      * @return 
      */  
-    public String InsertFault(final String county,final String FaultType,final String FaultDescribe,final String Sender,final String ReceivePerson,final String UserPhone,final String UserAddress,final String area,final String cell,final String celladdress,final String inmode ,final String User) {  
+    public String InsertFault(final String county,final String FaultType,final String FaultDescribe,final String Sender,final String ReceivePerson,final String UserPhone,final String UserAddress,final String area,final String cell,final String celladdress,final String inmode ,final String User,final String useraccount) {  
   
         arrayList.clear();  
         brrayList.clear();  
@@ -566,6 +566,7 @@ public class DBUtil {
         arrayList.add("celladdress");
         arrayList.add("inmode");
         arrayList.add("User");
+        arrayList.add("useraccount");
 
         brrayList.add(county);  
         brrayList.add(FaultType);
@@ -579,6 +580,7 @@ public class DBUtil {
         brrayList.add(celladdress);
         brrayList.add(inmode);
         brrayList.add(User);
+        brrayList.add(useraccount);
           
         Document doc = Soap.GetWebServre("InsertFault", arrayList, brrayList);
         if(doc==null)

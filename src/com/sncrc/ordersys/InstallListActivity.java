@@ -37,8 +37,8 @@ import android.app.DatePickerDialog.OnDateSetListener;
 import java.text.SimpleDateFormat;
 
 public class InstallListActivity extends Activity {
-	private static final String[] country = { "榆阳区", "神木", "府谷", "定边", "靖边",	"横山", "绥德", "米脂", "佳县", "吴堡", "清涧", "子洲", "大柳塔"};
-	private static final String[] type = {"未完成工单", "已完成工单", "申请弃单工单","成功装机工单","失败装机工单","待回单工单"};
+	private static final String[] country = { "榆阳区", "神木", "府谷", "定边", "靖边","横山", "绥德", "米脂", "佳县", "吴堡", "清涧", "子洲", "大柳塔"};
+	private static final String[] type = {"未完成工单", "已完成工单", "申请弃单工单","成功装机工单","失败装机工单","待回单工单","魔百和未完成工单","魔百和已完成工单"};
 	private Spinner Spinner_country;
 	private Spinner spinner_type;
 	private ArrayAdapter<String> adapter;
@@ -144,6 +144,10 @@ public class InstallListActivity extends Activity {
 						typeID="7";
 					else if(typestr.equals("未完扩容工单"))
 						typeID="8";
+					else if(typestr.equals("魔百和未完成工单"))
+						typeID="9";
+					else if(typestr.equals("魔百和已完成工单"))
+						typeID="10";
 					Log.d("InstallList", "typeID:"+typeID);
 					loadListview(selectedValue, typeID, SelectDateButton.getText().toString(),SelectEndDateButton.getText().toString(),Name.getText().toString());
 				}

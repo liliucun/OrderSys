@@ -88,7 +88,7 @@ public class addActivity extends Activity {
 				} else if (radio1.isChecked()) {
 					type = "移机";
 				} else {
-					type = "扩容";
+					type = "魔百和";
 				}
 
 				String sender = sendertEditText.getText().toString();
@@ -108,11 +108,11 @@ public class addActivity extends Activity {
 				String account = accountEditText.getText().toString();
 				EditText remarkEditText = (EditText) findViewById(R.id.remark);
 				String remark = remarkEditText.getText().toString();
-				if ((!type.equals("扩容") && !(country.equals("") || type.equals("")
+				if ((!type.equals("魔百和") && !(country.equals("") || type.equals("")
 						|| installedPerson.equals("") || userinfo.equals("")
 						|| useraddres.equals("") || money.equals("")
 						|| area.equals("---请选择---") || cell.equals("---请选择---"))) ||
-				(type.equals("扩容") && !(country.equals("") || type.equals("")
+				(type.equals("魔百和") && !(country.equals("") || type.equals("")
 						|| installedPerson.equals("")
 						|| useraddres.equals("")
 						|| area.equals("---请选择---") || cell.equals("---请选择---")))) {
@@ -485,16 +485,16 @@ public class addActivity extends Activity {
 						.show();
 				if (result.equals("Success")) {
 					// //给接单人发送短信
-					String[] info = installperson.split(":");
-					if (info.length >= 1) {
-						String phoneNumber = info[1];
-						String message = "宽带装维新派单：" + country + "用户[" + uerInfo
-								+ "]"+type+"，地址：" + useraddress + ",片区：" + area
-								+ ",小区：" + cell + ",接入方式:" + inmode + ",由["
-								+ sender + "]派单。";
-						Log.d("派单短信", message);
-						sendSMS(phoneNumber, message);
-					}
+//					String[] info = installperson.split(":");
+//					if (info.length >= 1) {
+//						String phoneNumber = info[1];
+//						String message = "宽带装维新派单：" + country + "用户[" + uerInfo
+//								+ "]"+type+"，地址：" + useraddress + ",片区：" + area
+//								+ ",小区：" + cell + ",接入方式:" + inmode + ",由["
+//								+ sender + "]派单。";
+//						Log.d("派单短信", message);
+//						sendSMS(phoneNumber, message);
+//					}
 					finish();
 				} else {
 					btn_add.setEnabled(true);

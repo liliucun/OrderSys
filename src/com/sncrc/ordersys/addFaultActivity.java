@@ -95,12 +95,14 @@ public class addFaultActivity extends Activity {
 				String userphone = userinfoEditText.getText().toString();
 				EditText addressEditText = (EditText) findViewById(R.id.useraddress);
 				String useraddres = addressEditText.getText().toString();
+				EditText userAccount = (EditText) findViewById(R.id.useraccount);
+				String useraccount = userAccount.getText().toString();
 				String faultDescribe=((EditText)findViewById(R.id.faultDescribe)).getText().toString();
 
-				if(!(county.equals("") || faulttype.equals("---请选择---") || installedPerson.equals("") || userphone.equals("") || useraddres.equals("") || 
+				if(!(useraccount.equals("") || county.equals("") || faulttype.equals("---请选择---") || installedPerson.equals("") || userphone.equals("") || useraddres.equals("") || 
 						faultDescribe.equals("") || area.equals("---请选择---") || cell.equals("---请选择---"))){
 					addFault(county, faulttype,faultDescribe, sender, installedPerson, userphone,
-							useraddres,area,cell,celladdress,inmode,myApp.getUser());
+							useraddres,area,cell,celladdress,inmode,myApp.getUser(),useraccount);
 				} else {
 					Toast.makeText(addFaultActivity.this, "以上信息不能为空！",Toast.LENGTH_SHORT).show();
 					btn_add.setEnabled(true);
@@ -394,7 +396,7 @@ public class addFaultActivity extends Activity {
 	}
 
 	// 添加到数据库
-	public void addFault(final String country,final String FaultType,final String FaultDescribe,final String Sender,final String ReceivePerson,final String UserPhone,final String UserAddress,final String area,final String cell,final String celladdress,final String inmode ,final String User) {
+	public void addFault(final String country,final String FaultType,final String FaultDescribe,final String Sender,final String ReceivePerson,final String UserPhone,final String UserAddress,final String area,final String cell,final String celladdress,final String inmode ,final String User,final String useraccount) {
 		new AsyncTask<String, Void, String>() {
 			Toast toast;//显示提交状态
 			@Override
@@ -407,7 +409,7 @@ public class addFaultActivity extends Activity {
 
 			@Override
 			protected String doInBackground(String... params) {				
-				return dbUtil.InsertFault(params[0], params[1], params[2], params[3],	params[4], params[5], params[6], params[7], params[8], params[9],params[10],params[11]);
+				return dbUtil.InsertFault(params[0], params[1], params[2], params[3],	params[4], params[5], params[6], params[7], params[8], params[9],params[10],params[11],params[12]);
 			}
 
 			@Override
@@ -417,14 +419,14 @@ public class addFaultActivity extends Activity {
 				if (result.equals("提交成功")) 
 				{
 					//给接单人发送短信
-					String[] info = ReceivePerson.split(":");
-					if (info.length >= 1) {
-						String phoneNumber = info[1];
-						String message = "宽带故障新派单："+country + "用户[" + UserPhone+"]故障，地址："
-								+ UserAddress + ",片区："+area+",小区："+cell+",接入方式:"+inmode+",由["+Sender+"]派单。";
-						System.out.println(message);
-						sendSMS(phoneNumber, message);
-					}
+//					String[] info = ReceivePerson.split(":");
+//					if (info.length >= 1) {
+//						String phoneNumber = info[1];
+//						String message = "宽带故障新派单："+country + "用户[" + UserPhone+"]故障，地址："
+//								+ UserAddress + ",片区："+area+",小区："+cell+",接入方式:"+inmode+",由["+Sender+"]派单。";
+//						System.out.println(message);
+//						sendSMS(phoneNumber, message);
+//					}
 					finish();
 				}
 				else
@@ -434,7 +436,7 @@ public class addFaultActivity extends Activity {
 				super.onPostExecute(result);
 			}
 
-		}.execute(country,FaultType,FaultDescribe,Sender,ReceivePerson,UserPhone,UserAddress,area,cell,celladdress,inmode,User);
+		}.execute(country,FaultType,FaultDescribe,Sender,ReceivePerson,UserPhone,UserAddress,area,cell,celladdress,inmode,User,useraccount);
 
 	}
 
